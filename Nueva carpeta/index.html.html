@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFICINA CONTABLE MJ | Expertos en Contabilidad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 152, 219, 0.8) 100%), url('OF CONTA.png') center/cover;
+            min-height: 80vh;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-card:hover .service-icon {
+            transform: rotateY(180deg);
+        }
+        
+        #testimonials .card::before {
+            content: '"';
+            font-size: 5rem;
+            position: absolute;
+            top: -30px;
+            left: 10px;
+            color: rgba(52, 152, 219, 0.1);
+        }
+        
+        .animate-numbers {
+            transition: all 1s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="https://placehold.co/150x50?text=Conta+Expert" alt="Logo de ContaExpert - Especialistas en soluciones contables" class="h-10">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-blue-600 font-medium">Inicio</a>
+                    <a href="#servicios" class="text-gray-700 hover:text-blue-600 font-medium">Servicios</a>
+                    <a href="#nosotros" class="text-gray-700 hover:text-blue-600 font-medium">Nosotros</a>
+                    <a href="#testimonios" class="text-gray-700 hover:text-blue-600 font-medium">Testimonios</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-blue-600 font-medium">Contacto</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+            <div class="flex flex-col space-y-4 px-4">
+                <a href="#inicio" class="text-gray-700 hover:text-blue-600 font-medium">Inicio</a>
+                <a href="#servicios" class="text-gray-700 hover:text-blue-600 font-medium">Servicios</a>
+                <a href="#nosotros" class="text-gray-700 hover:text-blue-600 font-medium">Nosotros</a>
+                <a href="#testimonios" class="text-gray-700 hover:text-blue-600 font-medium">Testimonios</a>
+                <a href="#contacto" class="text-gray-700 hover:text-blue-600 font-medium">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero flex items-center justify-center text-white pt-20">
+        <div class="max-w-7xl mx-auto px-4 py-16 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fadeIn">OFICINA CONTABLE MJ</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Expertos en Contabilidad General para tu negocio.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contacto" class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Contactar Ahora</a>
+                <a href="#servicios" class="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Nuestros Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2 animate-numbers" data-count="1">0</div>
+                <div class="text-gray-600">Años de Experiencia</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2 animate-numbers" data-count="500">0</div>
+                <div class="text-gray-600">Clientes Satisfechos</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2 animate-numbers" data-count="95">0</div>
+                <div class="text-gray-600">% Clientes Recurrentes</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2 animate-numbers" data-count="5">0</div>
+                <div class="text-gray-600">Profesionales Certificados</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nuestros Servicios Contables</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ofrecemos soluciones integrales adaptadas a las necesidades específicas de tu negocio</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden service-card transition duration-300 hover:shadow-xl">
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-blue-100 rounded-full p-4 service-icon transition duration-500">
+                                <i class="fas fa-calculator text-blue-600 text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Contabilidad Financiera</h3>
+                        <p class="text-gray-600 mb-4">Te ofrecemos estos servicios y mas solo contactanos a cualquiera de nuestras redes :) </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Registros contables diarios</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Declaraciones Mensuales</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Estados financieros mensuales</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 text-center">
+                        <a href="#contacto" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition duration-300">Consultar</a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden service-card transition duration-300 hover:shadow-xl">
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-blue-100 rounded-full p-4 service-icon transition duration-500">
+                                <i class="fas fa-chart-line text-blue-600 text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Planificación Fiscal</h3>
+                        <p class="text-gray-600 mb-4"></p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Declaraguate</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Declaraciones</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Arreglos de Omisos</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 text-center">
+                        <a href="#contacto" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition duration-300">Consultar</a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden service-card transition duration-300 hover:shadow-xl">
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-blue-100 rounded-full p-4 service-icon transition duration-500">
+                                <i class="fas fa-hand-holding-usd text-blue-600 text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Tramites</h3>
+                        <p class="text-gray-600 mb-4"></p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Antecedentes</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Renas</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Recomendaciones de mejora</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 text-center">
+                        <a href="#contacto" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition duration-300">Consultar</a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden service-card transition duration-300 hover:shadow-xl">
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-blue-100 rounded-full p-4 service-icon transition duration-500">
+                                <i class="fas fa-business-time text-blue-600 text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Consultoría</h3>
+                        <p class="text-gray-600 mb-4"></p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Información</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Recomendaciones</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Estrategias</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 text-center">
+                        <a href="#contacto" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition duration-300">Consultar</a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden service-card transition duration-300 hover:shadow-xl">
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-blue-100 rounded-full p-4 service-icon transition duration-500">
+                                <i class="fas fa-user-tie text-blue-600 text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Otros Servicios</h3>
+                        <p class="text-gray-600 mb-4"></p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Habilitacion de Libros electronicos</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Difentes Pagos al Gobierno u otros</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Creacion de Agencia Virtual SAT</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 text-center">
+                        <a href="#contacto" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition duration-300">Consultar</a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden service-card transition duration-300 hover:shadow-xl">
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-blue-100 rounded-full p-4 service-icon transition duration-500">
+                                <i class="fas fa-cloud text-blue-600 text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">TRAMITES MINEDU O DDRISS</h3>
+                        <p class="text-gray-600 mb-4">Pide informacion sobre otros tramites a cualquiera de nuestras redes socialesd</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Cedulas Docentes</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Renas</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Informes</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 text-center">
+                        <a href="#contacto" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition duration-300">Consultar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="OF CONTA.png" alt="LOGO DE LA OFI" class="rounded-lg shadow-xl">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Nuestra Experiencia y Compromiso</h2>
+                    <p class="text-gray-600 mb-6">En Soluciones Contables Integrales, combinamos más de 15 años de experiencia con tecnología avanzada para ofrecer servicios de contabilidad de primer nivel.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-600 rounded-full p-2 mr-4">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Profesionales Certificados</h4>
+                                <p class="text-gray-600">Nuestro equipo cuenta con certificaciones internacionales y formación continua.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-600 rounded-full p-2 mr-4">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Seguridad Garantizada</h4>
+                                <p class="text-gray-600">Utilizamos protocolos de seguridad avanzados para proteger tu información.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-600 rounded-full p-2 mr-4">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Enfoque Personalizado</h4>
+                                <p class="text-gray-600">Entendemos que cada cliente es único y diseñamos soluciones a medida.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contacto" class="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition duration-300">Conocer más sobre nosotros</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Lo que dicen nuestros clientes</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Confían en nosotros empresas de todos los tamaños y sectores</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-lg shadow-md p-6 relative">
+                    <div class="flex mb-4">
+                        <img src="https://placehold.co/80x80" alt="Juan Pérez - Director General de TecnoSoluciones" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Juan Pérez</h4>
+                            <p class="text-gray-600 text-sm">Director General de TecnoSoluciones</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Gracias a su equipo de contabilidad pudimos optimizar nuestros gastos fiscales en un 20%, lo que nos permitió reinvertir esos ahorros en crecimiento de la empresa."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-lg shadow-md p-6 relative">
+                    <div class="flex mb-4">
+                        <img src="https://placehold.co/80x80" alt="María Gómez - Gerente de Finanzas en Creativos S.A." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">María Gómez</h4>
+                            <p class="text-gray-600 text-sm">Gerente de Finanzas en Creativos S.A.</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Su servicio de contabilidad en la nube fue un cambio radical para nuestra empresa. Ahora tenemos información financiera en tiempo real para tomar mejores decisiones."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-lg shadow-md p-6 relative">
+                    <div class="flex mb-4">
+                        <img src="https://placehold.co/80x80" alt="Carlos Ramírez - Emprendedor y Dueño de Café Artesanal" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Carlos Ramírez</h4>
+                            <p class="text-gray-600 text-sm">Emprendedor y Dueño de Café Artesanal</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Como pequeño empresario, necesitaba asesoría clara y accesible. Ellos simplificaron todos los procesos fiscales y me ayudaron a entender mejor mis finanzas."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-16 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Contáctanos para una consulta gratuita</h2>
+                <p class="max-w-2xl mx-auto">Nuestro equipo estará encantado de asesorarte sobre cómo podemos ayudar a tu negocio a alcanzar sus objetivos financieros.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                    <form name="formularioXD" netlify
+                    id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block mb-2 font-medium">Nombre completo</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-blue-500 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label for="company" class="block mb-2 font-medium">Empresa</label>
+                                <input type="text" id="company" class="w-full px-4 py-3 rounded-lg bg-blue-500 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Nombre de tu empresa (opcional)">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block mb-2 font-medium">Correo electrónico</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-blue-500 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-white" placeholder="tu@email.com" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block mb-2 font-medium">Teléfono</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg bg-blue-500 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-white" placeholder="+xx xxx xxx xxxx" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="service" class="block mb-2 font-medium">Servicio de interés</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg bg-blue-500 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-white">
+                                <option value="" disabled selected>Selecciona un servicio</option>
+                                <option value="contabilidad">Contabilidad Financiera</option>
+                                <option value="fiscal">Planificación Fiscal</option>
+                                <option value="auditoria">Auditoría Externa</option>
+                                <option value="consultoria">Consultoría Empresarial</option>
+                                <option value="nomina">Nómina y Prestaciones</option>
+                                <option value="cloud">Contabilidad en la Nube</option>
+                                <option value="otros">Otros servicios</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-blue-500 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Cuéntanos cómo podemos ayudarte"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-6 rounded-lg transition duration-300">Enviar Mensaje</button>
+                    </form>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="bg-blue-700 rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">Información de Contacto</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="mt-1 mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Dirección</h4>
+                                    <p> Barrio San Miguel, Abajo de plaza de Toros <br> Taxisco, Santa Rosa</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="mt-1 mr-4">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Teléfonos</h4>
+                                    <p>+502 4283 7585 <br> +502 3652 1416</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="mt-1 mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Correos electrónicos</h4>
+                                    <p> oficinacontablemjoficial@gmail.com <br> oficinacontablemj1@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-700 rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">Horario de Atención</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-medium">Lunes a Viernes</h4>
+                                <p>8:30 - 18:00 hrs</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Sábados</h4>
+                                <p>9:00 - 16:30 hrs</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <p>Contacto de emergencia disponible 24/7 para clientes premium.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-6 justify-center md:justify-start">
+                        <a href="https://www.facebook.com/profile.php?id=61575046437338" target="_blank" class="text-white hover:text-blue-200 text-6xl"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/oficinacontablemj?utm_source=ig_web_button_share_sheet&igsh=MXJkYXE3b2xvczY1Nw==" target="_blank" class="text-white hover:text-blue-200 text-6xl"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.link/8pqxws" target="_blank" class="text-white hover:text-blue-200 text-6xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://placehold.co/150x50?text=Conta+Expert" alt="Logo de ContaExpert - Especialistas en soluciones contables" class="h-10 mb-6">
+                    <p class="mb-6">Expertos en soluciones contables integrales para empresas de todos los tamaños.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6">Servicios</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white">Contabilidad Financiera</a></li>
+                        <li><a href="#" class="hover:text-white">Planificación Fiscal</a></li>
+                        <li><a href="#" class="hover:text-white">Auditoría Externa</a></li>
+                        <li><a href="#" class="hover:text-white">Consultoría Empresarial</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6">Enlaces Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#inicio" class="hover:text-white">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-white">Servicios</a></li>
+                        <li><a href="#nosotros" class="hover:text-white">Nosotros</a></li>
+                        <li><a href="#testimonios" class="hover:text-white">Testimonios</a></li>
+                        <li><a href="#contacto" class="hover:text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6">Boletín Informativo</h4>
+                    <p class="mb-4">Suscríbete para recibir novedades y consejos financieros.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Tu correo" class="px-4 py-2 rounded-l-lg w-full">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p>&copy; 2025 Oficina Contable MJ. Todos los derechos reservados.</p>
+                <div class="flex justify-center space-x-6 mt-4">
+                    <a href="#" class="text-gray-300 hover:text-white text-sm">Términos de servicio</a>
+                    <a href="#" class="text-gray-300 hover:text-white text-sm">Política de privacidad</a>
+                    <a href="#" class="text-gray-300 hover:text-white text-sm">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden transition duration-300 hover:bg-blue-700">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Back to top button
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Animate numbers
+        function animateNumbers() {
+            const counters = document.querySelectorAll('.animate-numbers');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateNumbers, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+        
+        // Start animation when counter section is in view
+        const statsSection = document.querySelector('section.bg-white.py-16');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateNumbers();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Basic validation
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                
+                if (!name || !email) {
+                    alert('Por favor completa los campos requeridos');
+                    return;
+                }
+                
+                // Here you would typically send the form data to a server
+                alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
